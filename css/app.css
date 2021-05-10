@@ -74,29 +74,98 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper .header {
+  position: fixec;
   width: 100%;
-  height: 10vh;
+  height: 4vh;
+  display: flex;
+  background-color: #d3d3d3;
+  box-shadow: 3px 3px 10px rgba(167, 160, 160, 0.4);
+}
+
+.wrapper .header .logo {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .header .logo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
   background-color: blue;
+  color: #f5f3f4;
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+.wrapper .header .logo a:hover {
+  background-color: #f5f3f4;
+  color: blue;
+}
+
+.wrapper .header .logo i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18px;
+  border-radius: 50px;
+  background-color: #b1a7a6;
+  color: #f5f3f4;
+}
+
+.wrapper .header .logo input {
+  background-color: #b1a7a6;
+  border-radius: 50px;
+}
+
+.wrapper .header .logo input::placeholder {
+  color: white;
+}
+
+.wrapper .header .nav {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper .header .nav .fa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
+  color: #f5f3f4;
+}
+
+.wrapper .header .nav .fa:hover {
+  background-color: #b1a7a6;
+  color: #d3d3d3;
 }
 
 .wrapper .main {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   width: 100%;
-  height: 800px;
-  background-color: red;
+  height: 96vh;
 }
 
 .wrapper .main .left {
   width: 100%;
-  height: 90vh;
-  background-color: #ff00c8;
+  height: 96vh;
 }
 
 .wrapper .main .section {
   width: 100%;
-  height: 90vh;
-  background-color: green;
+  height: 96vh;
+  background-color: #f5f3f4;
   overflow-y: scroll;
 }
 
@@ -105,12 +174,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper .main .section .card {
-  width: 70%;
+  width: 80%;
   height: 250px;
   margin-left: 15%;
   border: 1px solid black;
   border-radius: 5px;
-  background-color: grey;
+  background-color: #b1a7a6;
   margin-top: 10px;
   overflow: hidden;
   padding: 10px;
@@ -134,12 +203,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 50px;
   height: 50px;
   margin-left: 20px;
+  border-radius: 50px;
 }
 
 .wrapper .main .section .card .card_head .user {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  background-color: red;
 }
 
 .wrapper .main .section .card .card_head .user .name {
@@ -152,14 +221,66 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrapper .main .section .card .card_head .more {
   width: 100%;
-  background-color: #000980;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.wrapper .main .right {
+.wrapper .main .section .card .card_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 90vh;
-  background-color: #806200;
+  height: 60%;
+  overflow-y: scroll;
+}
+
+.wrapper .main .section .card .card_main::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .wrapper .main .section .card .card_main {
+    padding-top: 50px;
+  }
+}
+
+.wrapper .main .section .card .card_footer {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.wrapper .main .section .card .card_footer .buttonai {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid black;
+}
+
+.wrapper .main .section .card .card_footer .buttonai .like {
+  width: 50%;
+  background-color: #b1a7a6;
+}
+
+.wrapper .main .section .card .card_footer .buttonai .comment {
+  width: 50%;
+  background-color: #b1a7a6;
+}
+
+.wrapper .main .section .card .card_footer input {
+  width: 100%;
+  border-radius: 50px;
+  margin-top: 5px;
+  background-color: #f5f3f4;
+}
+
+.wrapper .main .section .right {
+  width: 100%;
+  height: 96vh;
+  background-color: #f5f3f4;
+}
+
+.likeON {
+  color: red;
 }

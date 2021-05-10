@@ -1,36 +1,97 @@
 .wrapper {
   width: 100%;
   .header {
+    position: fixec;
     width: 100%;
-    height: 10vh;
-    background-color: blue;
+    height: 4vh;
+    display: flex;
+    background-color: #d3d3d3;
+    box-shadow: 3px 3px 10px rgba(167, 160, 160, 0.4);
+    .logo {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background-color: blue;
+        color: #f5f3f4;
+        margin-right: 30px;
+        font-size: 20px;
+        &:hover {
+          background-color: #f5f3f4;
+          color: blue;
+        }
+      }
+      i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 18px;
+        border-radius: 50px;
+        background-color: #b1a7a6;
+        color: #f5f3f4;
+      }
+      input {
+        background-color: #b1a7a6;
+        border-radius: 50px;
+        &::placeholder {
+          color: white;
+        }
+      }
+    }
+    .nav {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .fa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        font-size: 24px;
+        color: #f5f3f4;
+        &:hover {
+          background-color: #b1a7a6;
+          color: #d3d3d3;
+        }
+      }
+    }
   }
+
   .main {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     width: 100%;
-    height: 800px;
-    background-color: red;
+    height: 96vh;
     .left {
       width: 100%;
-      height: 90vh;
-      background-color: rgb(255, 0, 200);
+      height: 96vh;
     }
     .section {
       width: 100%;
-      height: 90vh;
-      background-color: green;
+      height: 96vh;
+      background-color: #f5f3f4;
       overflow-y: scroll;
       &::-webkit-scrollbar {
         display: none;
       }
       .card {
-        width: 70%;
+        width: 80%;
         height: 250px;
         margin-left: 15%;
         border: 1px solid black;
         border-radius: 5px;
-        background-color: grey;
+        background-color: #b1a7a6;
         margin-top: 10px;
         overflow: hidden;
         padding: 10px;
@@ -48,11 +109,11 @@
             width: 50px;
             height: 50px;
             margin-left: 20px;
+            border-radius: 50px;
           }
           .user {
             display: grid;
             grid-template-rows: 1fr 1fr;
-            background-color: red;
             .name {
               width: 100%;
             }
@@ -62,18 +123,61 @@
           }
           .more {
             width: 100%;
-            background-color: rgb(0, 9, 128);
             display: flex;
             justify-content: center;
             align-items: center;
           }
         }
+        .card_main {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 60%;
+          overflow-y: scroll;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          @media (max-width: 600px) {
+            padding-top: 50px;
+          }
+        }
+        .card_footer {
+          margin-top: 10px;
+          width: 100%;
+          height: auto;
+          .buttonai {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid black;
+            .like {
+              width: 50%;
+              background-color: #b1a7a6;
+            }
+            .comment {
+              width: 50%;
+              background-color: #b1a7a6;
+            }
+          }
+          input {
+            width: 100%;
+            border-radius: 50px;
+            margin-top: 5px;
+            background-color: #f5f3f4;
+          }
+        }
+      }
+      .right {
+        width: 100%;
+        height: 96vh;
+        background-color: #f5f3f4;
       }
     }
-    .right {
-      width: 100%;
-      height: 90vh;
-      background-color: rgb(128, 98, 0);
-    }
   }
+}
+
+.likeON {
+  color:red;
+  
 }
