@@ -6,7 +6,7 @@ const feed = [{
             pavarde: 'Pavardenis',
             amzius: 0,
             lytis: 'Vyras',
-            avataras: 'avataras.png',
+            avataras: '',
             nuoroda: '#'
         },
         laikas: 1583832433393,
@@ -21,10 +21,10 @@ const feed = [{
     {
         autorius: {
             vardas: 'Laura',
-            pavarde: 'Pavardenis',
+            pavarde: '...',
             amzius: 20,
             lytis: 'Moteris',
-            avataras: 'avataras.png',
+            avataras: '',
             nuoroda: '#',
         },
         laikas: 1583832433393,
@@ -60,7 +60,7 @@ const feed = [{
             pavarde: 'Pavardenis',
             amzius: 50,
             lytis: 'Vyras',
-            avataras: '3.png',
+            avataras: '1.png',
             nuoroda: '#',
         },
         laikas: 1583832434388,
@@ -114,7 +114,7 @@ const feed = [{
             pavarde: 'Pavardenis',
             amzius: 50,
             lytis: 'Vyras',
-            avataras: '1.png',
+            avataras: 'avataras.png',
             nuoroda: '#',
         },
         laikas: 1583832434388,
@@ -161,7 +161,7 @@ const feed = [{
             paveiksliukai: [
                 '1.png',
                 '2.png',
-                '3.png',
+                '1.png',
             ]
         }
     },
@@ -181,12 +181,11 @@ const feed = [{
             paveiksliukai: [
                 '1.png',
                 '2.png',
-                '3.png',
+                '1.png',
                 '4.png',
             ]
         }
     },
-
     {
         autorius: {
             vardas: 'Vardenis',
@@ -201,16 +200,13 @@ const feed = [{
             tekstas: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex earum tenetur odit nemo id architecto laborum iure error, aliquid nisi',
             spalva: '',
             paveiksliukai: [
-                '1.png',
+                '3.jpeg',
                 '2.png',
-                '3.png',
+                '1.png',
                 '4.png',
                 '5.png',
                 '6.png',
             ]
         }
     },
-
 ]
-
-
