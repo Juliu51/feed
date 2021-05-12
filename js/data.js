@@ -14,7 +14,7 @@ const feed = [{
             tekstas: 'Sveiki, as esu Tomas.',
             spalva: '',
             paveiksliukai: [
-
+                '3.jpeg'
             ]
         }
     },
@@ -60,7 +60,7 @@ const feed = [{
             pavarde: 'Pavardenis',
             amzius: 50,
             lytis: 'Vyras',
-            avataras: '1.png',
+            avataras: '1.jpeg',
             nuoroda: '#',
         },
         laikas: 1583832434388,
@@ -122,8 +122,8 @@ const feed = [{
             tekstas: 'Labas',
             spalva: 'red',
             paveiksliukai: [
-                '1.png',
-                '2.png',
+                '1.jpeg',
+                '2.jpeg',
             ]
         }
     },
@@ -141,7 +141,7 @@ const feed = [{
             tekstas: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex earum tenetur odit nemo id architecto laborum iure error, aliquid nisi . Ex earum tenetur  . Ex earum tenetur odit nemo id architecto laborum iure erro',
             spalva: '',
             paveiksliukai: [
-                '1.png',
+                '1.jpeg',
             ]
         }
     },
@@ -159,9 +159,9 @@ const feed = [{
             tekstas: 'LabasLorem ipsum dolor sit, amet consectetur adipisicing elit. Ex earum tenetur odit nemo id architecto laborum iure error, aliquid nisi, Ex earum tenetur odit nemo id architecto laborum iure erro',
             spalva: '',
             paveiksliukai: [
-                '1.png',
-                '2.png',
-                '1.png',
+                '1.jpeg',
+                '2.jpeg',
+                '1.jpeg',
             ]
         }
     },
@@ -179,10 +179,10 @@ const feed = [{
             tekstas: 'LabasLorem ipsum dolor sit, amet consectetur adipisicing elit. Ex earum ',
             spalva: 'orange',
             paveiksliukai: [
-                '1.png',
-                '2.png',
-                '1.png',
-                '4.png',
+                '1.jpeg',
+                '2.jpeg',
+                '1.jpeg',
+                '4.jpeg',
             ]
         }
     },
@@ -201,11 +201,11 @@ const feed = [{
             spalva: '',
             paveiksliukai: [
                 '3.jpeg',
-                '2.png',
-                '1.png',
-                '4.png',
-                '5.png',
-                '6.png',
+                '2.jpeg',
+                '1.jpeg',
+                '4.jpeg',
+                '5.jpeg',
+                '6.jpeg',
             ]
         }
     },

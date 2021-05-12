@@ -50,9 +50,9 @@ function returnHead(who, laikas) {
 function returnMain(message) {
 
     let HTML = `<div class="card__main">
-                 <p class="para">${message.tekstas}</p>
+                 <p>${message.tekstas}</p>
                   <div class="gallery">
-                     <img src="./img/5.jpeg" alt="img">
+                     <img src="./img/${message.paveiksliukai}" alt="img">
                   </div>
                </div>`;
 
