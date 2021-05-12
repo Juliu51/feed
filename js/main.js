@@ -79,9 +79,8 @@ function returnHead(who, laikas) {
 function returnMain(message) {
 
     let HTML = `<div class="card__main">
-                 <p>${message.tekstas}</p>
+                 ${getText(message)}
                   <div class="gallery">
-
                      <img src="./img/1.jpeg" alt="img">
                   </div>
                </div>`;
@@ -110,26 +109,32 @@ let HTML = `<div class="LikeCommentShare">
     return HTML;
 }
 
-// function getText(message) {
+function getText(message) {
 
-//     let messageText = message.tekstas;
-//     let kiek = 10;
-//     let textArr = messageText.split(' ');
-//     let normal = textArr.length;
-//     let cutted = '';
+    let messageText = message.tekstas;
+    let HTML;
+    let kiek = 10;
+    let cutted;
+    let print;
+    let textArr = messageText.split(' ');
+    
+    if (textArr.length > kiek) {
+        cutted = textArr.slice();
+        cutted.length = kiek;
+        print = cutted.join('');
+        HTML = `<p>${print} <span>[..]</span></p>`
+    } else {
+        print = textArr.join('');
+        HTML = `<p>${print}<span></span></p>`
+    }
+    return HTML;
+}
 
-
-//     // ... ?
-//     if (normal.length < kiek) {
-//         cutted = normal.length;
-//         console.log(cutted);
-//     }
-
-
-//     let HTML = `<p>${message.tekstas}</p>`;
-
-//     return HTML;
-// }
+function renderText() {
+    let cards = document.querySelectoAall('.card');
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener('click', (e) => { e.path[2].children[1].innerText });
+}
 
 
 function getAvatar(img) {
@@ -146,6 +151,7 @@ function getAvatar(img) {
 //----PASKUTINIS---//
 getData(feed);
 getData1(feed);
+renderText;
 
 
 // let likebutton = document.querySelector('.pirmas');
