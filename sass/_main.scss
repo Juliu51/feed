@@ -76,6 +76,29 @@
     .left {
       width: 100%;
       height: 96vh;
+      display: flex;
+      justify-content: center;
+      
+      .draugai {
+       h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: 900;
+        padding:20px 0;
+       }
+
+      .sarasas {
+        display: block;
+        width: 100%;
+        .para {
+            width: 100%;
+            height: 100%;
+            font-size: 18px;
+          }
+        }
+      }
     }
     .section {
       width: 100%;

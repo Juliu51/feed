@@ -38,8 +38,8 @@ const feed = [{
     },
     {
         autorius: {
-            vardas: 'Tomas',
-            pavarde: 'Pavardenis',
+            vardas: 'Tadas',
+            pavarde: 'Obuolys',
             amzius: 27,
             lytis: 'Vyras',
             avataras: '2.png',
@@ -56,8 +56,8 @@ const feed = [{
     },
     {
         autorius: {
-            vardas: 'Vardenis',
-            pavarde: 'Pavardenis',
+            vardas: 'Simas',
+            pavarde: 'Visockas',
             amzius: 50,
             lytis: 'Vyras',
             avataras: '1.jpeg',
@@ -74,8 +74,8 @@ const feed = [{
     },
     {
         autorius: {
-            vardas: 'Vardenis',
-            pavarde: 'Pavardenis',
+            vardas: 'Kostas',
+            pavarde: 'Dramblys',
             amzius: 50,
             lytis: 'Vyras',
             avataras: 'avataras.png',
@@ -92,8 +92,8 @@ const feed = [{
     },
     {
         autorius: {
-            vardas: 'Vardenis',
-            pavarde: 'Pavardenis',
+            vardas: 'Karolis',
+            pavarde: 'Naktis',
             amzius: 50,
             lytis: 'Vyras',
             avataras: 'avataras.png',
@@ -110,7 +110,7 @@ const feed = [{
     },
     {
         autorius: {
-            vardas: 'Vardenis',
+            vardas: 'Jonas',
             pavarde: 'Pavardenis',
             amzius: 50,
             lytis: 'Vyras',
@@ -129,8 +129,8 @@ const feed = [{
     },
     {
         autorius: {
-            vardas: 'Vardenis',
-            pavarde: 'Pavardenis',
+            vardas: 'Antanas',
+            pavarde: 'Saule',
             amzius: 50,
             lytis: 'Vyras',
             avataras: 'avataras.png',
@@ -147,7 +147,7 @@ const feed = [{
     },
     {
         autorius: {
-            vardas: 'Vardenis',
+            vardas: 'Kristina',
             pavarde: 'Pavardenis',
             amzius: 50,
             lytis: 'Vyras',
@@ -167,8 +167,8 @@ const feed = [{
     },
     {
         autorius: {
-            vardas: 'Vardenis',
-            pavarde: 'Pavardenis',
+            vardas: 'Naktis',
+            pavarde: 'Diena',
             amzius: 50,
             lytis: 'Vyras',
             avataras: 'avataras.png',
@@ -188,7 +188,7 @@ const feed = [{
     },
     {
         autorius: {
-            vardas: 'Vardenis',
+            vardas: 'Koste',
             pavarde: 'Pavardenis',
             amzius: 50,
             lytis: 'Vyras',

@@ -3,7 +3,6 @@ function getData(data) {
 
     let HTML = "";
     let sectionBody = document.querySelector('.section');
-
   
 
     if (Array.isArray(data)) {
@@ -22,7 +21,37 @@ function getData(data) {
     } else {
        return console.log('Tai ne masyvas');
     }
+}
+function getData1(data) {
+
+    let HTML = "";
+    let sarasas = document.querySelector('.sarasas');
+  
+
+    if (Array.isArray(data)) {
+
+        //patikrina kiek objektu yra
+        for (let i = 0; i < data.length; i++) {
+            //padaro 11 HTML korteliu
+            HTML += getLists(data[i]);
+        }
+        // for (let index of data) {
+        //     HTML += getLists(index);
+        // }
+         //patikrina ar masyvas-----
+        return sarasas.innerHTML = HTML;
+        // return console.log(HTML);
+    } else {
+       return console.log('Tai ne masyvas');
     }
+}
+    
+function getLists(list) {
+    let HTML = `<div class="para">
+    <p>  ${list.autorius.vardas} ${list.autorius.pavarde}</p>
+     </div>`
+    return HTML;
+}
 
 function getList(list) {
     let HTML = `<div class="card">
@@ -116,6 +145,7 @@ function getAvatar(img) {
 
 //----PASKUTINIS---//
 getData(feed);
+getData1(feed);
 
 
 // let likebutton = document.querySelector('.pirmas');
