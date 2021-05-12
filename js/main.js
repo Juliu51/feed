@@ -52,12 +52,14 @@ function returnMain(message) {
     let HTML = `<div class="card__main">
                  <p>${message.tekstas}</p>
                   <div class="gallery">
-                     <img src="./img/${message.paveiksliukai}" alt="img">
+
+                     <img src="./img/1.jpeg" alt="img">
                   </div>
                </div>`;
 
     return HTML;
 }
+// <img src="./img/${message.paveiksliukai}" alt="img"> 
 
 function returnFooter(who) {
 let HTML = `<div class="LikeCommentShare">
