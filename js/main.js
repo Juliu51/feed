@@ -130,11 +130,11 @@ function getText(message) {
     return HTML;
 }
 
-function renderText() {
-    let cards = document.querySelectoAall('.card');
-    for (let i = 0; i < cards.length; i++) {
-        cards[i].addEventListener('click', (e) => { e.path[2].children[1].innerText });
-}
+// function renderText() {
+//     let cards = document.querySelectoAall('.card');
+//     for (let i = 0; i < cards.length; i++) {
+//         cards[i].addEventListener('click', (e) => { e.path[2].children[1].innerText });
+// }z
 
 
 function getAvatar(img) {
