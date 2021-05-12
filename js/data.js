@@ -60,7 +60,7 @@ const feed = [{
             pavarde: 'Visockas',
             amzius: 50,
             lytis: 'Vyras',
-            avataras: '1.jpeg',
+            avataras: '1.png',
             nuoroda: '#',
         },
         laikas: 1583832434388,
