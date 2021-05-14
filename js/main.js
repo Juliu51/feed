@@ -22,6 +22,7 @@ function getData(data) {
        return console.log('Tai ne masyvas');
     }
 }
+
 function getData1(data) {
 
     let HTML = "";
@@ -76,10 +77,10 @@ function returnHead(who, laikas) {
     return HTML;
 }
 
-function returnMain(message) {
+function returnMain(text) {
 
     let HTML = `<div class="card__main">
-                 ${getText(message)}
+                     ${getText(text)} 
                   <div class="gallery">
                      <img src="./img/1.jpeg" alt="img">
                   </div>
@@ -110,33 +111,50 @@ let HTML = `<div class="LikeCommentShare">
 }
 
 function getText(message) {
-
-    let messageText = message.tekstas;
-    let HTML;
-    let kiek = 10;
-    let cutted;
-    let print;
-    let textArr = messageText.split(' ');
     
+    let messageText = message.tekstas;
+    let kiek = 10;
+    let HTML;
+    
+    
+    let normal;
+    let cutted;
+    let textArr = messageText.split(' ');
+
+        // Cutted TEXT first
     if (textArr.length > kiek) {
         cutted = textArr.slice();
         cutted.length = kiek;
-        print = cutted.join('');
-        HTML = `<p>${print} <span>[..]</span></p>`
-    } else {
-        print = textArr.join('');
-        HTML = `<p>${print}<span></span></p>`
-    }
-    return HTML;
+        print = cutted.join(' ');
+        HTML = `<p>${print}</p><span>...Show more</span>`;
+        }  else {
+            // Normal TEXT
+           print = textArr.join(' ');
+           HTML = `<p>${print}<span></span></p>`;
+           
+       }
+          return HTML;
 }
 
-// function renderText() {
-//     let cards = document.querySelectoAall('.card');
-//     for (let i = 0; i < cards.length; i++) {
-//         cards[i].addEventListener('click', (e) => { e.path[2].children[1].innerText });
-// }z
+function renderText() {
+    let cards = document.querySelectorAll('.card');
+    let showButton = document.querySelectorAll('.card__main span');
+    let cardMain = document.querySelectorAll('.card__main p')
+
+    console.log(showButton);
 
 
+    for (let i = 0; i < showButton.length; i++) {
+
+        let feedText = feed[i].pranesimas.tekstas;
+
+        showButton[i].addEventListener('click', (e) => {
+            
+            cardMain[i].innerHTML = feedText;
+            
+        });
+    }
+}
 function getAvatar(img) {
 
     if (img.avataras === '') {
@@ -148,22 +166,8 @@ function getAvatar(img) {
     return HTML;
 }
 
+
 //----PASKUTINIS---//
 getData(feed);
 getData1(feed);
-renderText;
-
-
-// let likebutton = document.querySelector('.pirmas');
-// let likeON = document.querySelector('.like');
-
-
-// likebutton.addEventListener('click', () => {
-
-//     if (likeON.className == 'like pirmas likeON') {
-//         likeON.classList.remove('likeON');
-//     } else {
-//         likeON.classList.add('likeON');
-//     }
-
-// });
+renderText();

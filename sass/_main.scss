@@ -164,9 +164,13 @@
           p {
               color: black;
               font-size: 18px;
-              letter-spacing: .5px;
               font-family: 'Titillium WEB', cursive;
           }
+          span {
+            color: blue;
+            font-size: 12px;
+            cursor: pointer;
+        }
           .gallery {
               display: inline-block;
               width: 100%;
