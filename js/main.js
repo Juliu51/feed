@@ -81,10 +81,8 @@ function returnMain(text) {
 
     let HTML = `<div class="card__main">
                      ${getText(text)} 
-                  <div class="gallery">
-                     <img src="./img/1.jpeg" alt="img">
-                  </div>
-               </div>`;
+                     ${getGallery(text)}
+                 </div>`;
 
     return HTML;
 }
@@ -135,13 +133,42 @@ function getText(message) {
        }
           return HTML;
 }
+///// paveiksliukai
+function getGallery(img) {
+    
+    let imgs = img.paveiksliukai;
+    let HTML = '';
+    for (let i = 0; i < imgs.length; i++) {
+        if (imgs[i] < 0) {
+            console.log(imgs)
+            
+        } HTML = `<div class="gallery">
+        <div class="gallery__wrap">
+        ${pav(img)}
+                </div>
+                </div>`;
+    }
+    return HTML;
+}
+
+function pav(imz) {
+    let img = imz.paveiksliukai;
+    let HTML = "";
+    console.log(img)
+    for (let i = 0; i < img.length; i++) {
+        let a = + img[i];
+        
+        let HTML = `<img src="./img/${a}" alt="img"></img>`;
+    }
+    return HTML;
+}
+
 
 function renderText() {
     let cards = document.querySelectorAll('.card');
     let showButton = document.querySelectorAll('.card__main span');
     let cardMain = document.querySelectorAll('.card__main p')
 
-    console.log(showButton);
 
 
     for (let i = 0; i < showButton.length; i++) {
