@@ -65,12 +65,12 @@ function getList(list) {
 
 }
  
-function returnHead(who, laikas) {
+function returnHead(who, time) {
     let HTML = ` <div class="card_head">
     ${getAvatar(who)}
     <div class="user">
         <div class="name">${who.vardas} ${who.pavarde}</div>
-        <div class="time">${laikas}</div>
+        <div class="time">${getTime(time)}</div>
     </div>
     <div class="more"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></i></div>
 </div>`
@@ -80,9 +80,10 @@ function returnHead(who, laikas) {
 function returnMain(text) {
 
     let HTML = `<div class="card__main">
+    
                      ${getText(text)} 
-                     <div class="gallery">${getGallery(text.paveiksliukai)}</div>
-                 </div>`;
+                           ${getGallery(text.paveiksliukai)}
+                                 </div>`;
 
     return HTML;
 }
@@ -108,6 +109,36 @@ let HTML = `<div class="LikeCommentShare">
     return HTML;
 }
 
+function getTime(time) {
+
+    
+
+    let HTML = '';
+
+    var msPerMinute = 60 * 1000;
+    var msPerHour = msPerMinute * 60;
+    var msPerDay = msPerHour * 24;
+    var msPerMonth = msPerDay * 30;
+    var msPerYear = msPerDay * 365;
+    var previous = new Date(time);
+    var current = new Date().getTime();
+
+    var elapsed = current - previous;
+
+    if (elapsed < msPerMinute) {
+        return Math.round(elapsed / 1000).toString() + " seconds ago";
+    } else if (elapsed < msPerHour) {
+        return Math.round(elapsed / msPerMinute).toString() + " minutes ago";
+    } else if (elapsed < msPerDay) {
+        return Math.round(elapsed / msPerHour).toString() + " hours ago";
+    } else if (elapsed < msPerMonth) {
+        return Math.round(elapsed / msPerDay).toString() + " days ago";
+    } else if (elapsed < msPerYear) {
+        return Math.round(elapsed / msPerMonth).toString() + " months ago";
+    } else {
+        return Math.round(elapsed / msPerYear).toString() + " years ago";
+    }
+}
 function getText(message) {
     
     let messageText = message.tekstas;
@@ -133,19 +164,34 @@ function getText(message) {
        }
           return HTML;
 }
-///// paveiksliukai
+
 function getGallery(img) {
 
+
+
     let HTML = '';
+    let pictures = '';
+    let kiek = 4;
+
+
     if (img.length > 0) {
-        HTML = `<img class="img0" src="./img/${img[0]}" alt="image">`
-        for (let i = 1; i < img.length; i++){
-            HTML += `<img class="imgs" src="./img/${img[i]}" alt="image">`;
+
+        for (let i = 0; i < img.length; i++) {
+            pictures += `<img src="./img/${img[i]}" alt="pic">`;
+            if (img.length > kiek) {
+                img.length = kiek;
+            }
+            HTML = `<div class="gallery">
+                        <div class="gallery__wrap length--${i + 1}">
+                        ${pictures}
+                        </div>
+                     </div>`;
         }
-    } else {
-        HTML = '';
     }
+
+
     return HTML;
+
 }
 
 
