@@ -172,6 +172,7 @@ function getGallery(img) {
     let HTML = '';
     let pictures = '';
     let kiek = 4;
+    let nauja;
 
 
     if (img.length > 0) {
@@ -179,14 +180,17 @@ function getGallery(img) {
         for (let i = 0; i < img.length; i++) {
             pictures += `<img src="./img/${img[i]}" alt="pic">`;
             if (img.length > kiek) {
+                nauja = img.length;
                 img.length = kiek;
             }
             HTML = `<div class="gallery">
                         <div class="gallery__wrap length--${i + 1}">
                         ${pictures}
                         </div>
-                     </div>`;
-        }
+                        <div>${nauja}</div>
+                                             </div>`;
+        } 
+        
     }
 
 
