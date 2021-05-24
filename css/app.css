@@ -174,14 +174,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper .main .left .draugai .sarasas {
-  display: block;
+  display: inline-block;
   width: 100%;
 }
 
 .wrapper .main .left .draugai .sarasas .para {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   font-size: 18px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  margin: 10px 0px;
+}
+
+.wrapper .main .left .draugai .sarasas .para p {
+  width: 50%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.wrapper .main .left .draugai .sarasas .para .imgav {
+  width: 50%;
+}
+
+.wrapper .main .left .draugai .sarasas .para .imgav img {
+  float: left;
+  width: 50px;
+  height: 50px;
 }
 
 .wrapper .main .section {
@@ -266,7 +287,7 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper .main .section .card .card__main p {
   color: black;
   font-size: 18px;
-  font-family: 'Titillium WEB', cursive;
+  font-family: "Titillium WEB", cursive;
 }
 
 .wrapper .main .section .card .card__main span {
@@ -407,10 +428,86 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
 }
 
-.wrapper .main .section .right {
+.wrapper .main .right {
   width: 100%;
   height: 96vh;
   background-color: #f5f3f4;
+  display: inline-block;
+  justify-content: center;
+}
+
+.wrapper .main .right h1 {
+  margin: 20px 0;
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.wrapper .main .right .img__wrap {
+  width: 100%;
+}
+
+.wrapper .main .right .img__wrap img {
+  display: inline-block;
+  width: 98%;
+  background-position: center center;
+  background-size: contain;
+  margin: 0px 1px;
+}
+
+.wrapper .main .right .arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.wrapper .main .right .arrows .left__arrow {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b1a7a698;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.541);
+  cursor: pointer;
+}
+
+.wrapper .main .right .arrows .left__arrow:hover {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.541);
+}
+
+.wrapper .main .right .arrows .left__arrow img {
+  width: 60px;
+  height: 60px;
+}
+
+.wrapper .main .right .arrows .right__arrow {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b1a7a698;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.541);
+  cursor: pointer;
+}
+
+.wrapper .main .right .arrows .right__arrow :hover {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.541);
+  border-radius: 20px;
+}
+
+.wrapper .main .right .arrows .right__arrow img {
+  width: 60px;
+  height: 60px;
 }
 
 .likeON {

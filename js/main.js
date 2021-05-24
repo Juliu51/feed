@@ -1,4 +1,5 @@
 "use strict";
+
 function getData(data) {
 
     let HTML = "";
@@ -49,7 +50,8 @@ function getData1(data) {
     
 function getLists(list) {
     let HTML = `<div class="para">
-    <p>  ${list.autorius.vardas} ${list.autorius.pavarde}</p>
+    <p class="imgav">${ getAvatar(list.autorius)} </p>
+    <p>${list.autorius.vardas} ${list.autorius.pavarde}</p>
      </div>`
     return HTML;
 }
@@ -228,6 +230,43 @@ function getAvatar(img) {
 
     return HTML;
 }
+
+const galleryImg = ['1.jpg', '2.jpg', '3.jpg'];
+
+let where = document.querySelector('.img__wrap');
+let leftArrow = document.querySelector('.left__arrow');
+let rightArrow = document.querySelector('.right__arrow');
+
+
+let img = '';
+let position = 0;
+
+let sum = 0;
+              let kiek = 2;
+
+              let HTML = '';
+
+              function press(num) {
+
+                  const galleryImg = ['1.jpg', '2.jpg', '3.jpg'];
+                  let where = document.querySelector('.img__wrap');
+
+                  sum += num;
+                  if (sum > kiek) {
+                      sum = 0
+                  }
+                  if (sum < 0) {
+                      sum = kiek;
+                  }
+
+                  HTML = `<img src="./img/gallery/${galleryImg[sum]}" alt="img">`;
+                  where.innerHTML = HTML;
+              }
+
+
+
+
+
 
 
 //----PASKUTINIS---//
