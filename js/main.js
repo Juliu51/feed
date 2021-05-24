@@ -175,7 +175,7 @@ function getGallery(img) {
     let pictures = '';
     let kiek = 4;
     let nauja;
-
+    let HZ = '';
 
     if (img.length > 0) {
 
@@ -184,21 +184,24 @@ function getGallery(img) {
             if (img.length > kiek) {
                 nauja = img.length;
                 img.length = kiek;
-            }
-            HTML = `<div class="gallery">
-                        <div class="gallery__wrap length--${i + 1}">
-                        ${pictures}
-                        </div>
-                        <div>${nauja}</div>
-                                             </div>`;
-        } 
+            } HTML = `<div class="gallery">
+            <div class="gallery__wrap length--${i + 1}">
+            ${pictures}
+            </div>
+            <div>${HZ}</div>
+                                 </div>`;
+        }
+        if (nauja > kiek) {
+            HZ = `${nauja}`;
+            console.log(HZ)
+        }
         
     }
-
 
     return HTML;
 
 }
+
 
 
 
