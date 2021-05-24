@@ -168,17 +168,12 @@ function getText(message) {
 }
 
 function getGallery(img) {
-
-
-
-    let HTML = '';
+  let HTML = '';
     let pictures = '';
     let kiek = 4;
     let nauja;
     let HZ = '';
-
     if (img.length > 0) {
-
         for (let i = 0; i < img.length; i++) {
             pictures += `<img src="./img/${img[i]}" alt="pic">`;
             if (img.length > kiek) {
@@ -197,12 +192,8 @@ function getGallery(img) {
         } else {
             HZ = '';
         }
-    
-    
-    }
-
+            }
     return [HTML , HZ];
-
 }
 
 
