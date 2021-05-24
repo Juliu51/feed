@@ -194,11 +194,14 @@ function getGallery(img) {
         if (nauja > kiek) {
             HZ = `${nauja}`;
             console.log(HZ)
+        } else {
+            HZ = '';
         }
-        
+    
+    
     }
 
-    return HTML;
+    return [HTML , HZ];
 
 }
 
