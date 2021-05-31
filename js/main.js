@@ -168,46 +168,40 @@ function getText(message) {
 }
 
 function getGallery(img) {
-  let HTML = '';
+    let HTML = '';
     let pictures = '';
     let kiek = 4;
     let nauja;
-    let HZ = '';
+    
     if (img.length > 0) {
         for (let i = 0; i < img.length; i++) {
             pictures += `<img src="./img/${img[i]}" alt="pic">`;
             if (img.length > kiek) {
                 nauja = img.length;
-                img.length = kiek;
+                nauja = 4;
             } HTML = `<div class="gallery">
             <div class="gallery__wrap length--${i + 1}">
             ${pictures}
             </div>
-            <div>${QQ}</div>
+            <div>${HZ(img)}</div>
                                  </div>`;
         }
-      
-    return HTML
-}
+    }
+            return HTML
+    }
 
-    function QQ() {
-        
-        // let kiek = 4;
-        // let HZ = '';
-        // let naujaz = img.length;
-        // for (let i = 0; i < img.length; i++) {
-            
-        //     console.log(naujaz)
-        //     if (naujaz > kiek) {
-        //         HZ = `${naujaz}`;
-        //     } else {
-        //         HZ = '';
-        //     }
-        // }
-        // }
-return HZ
+function HZ(img) {
+    
+    let HZ = ``;
+    if (img.length > 3){
+      HZ = `${img.length}`
+    } else {
+        console.log(img.length)
+        HZ = ``;
+    }
+    
+    return HZ;
 }
-
 
 
 function renderText() {
@@ -280,4 +274,5 @@ let sum = 0;
 //----PASKUTINIS---//
 getData(feed);
 getData1(feed);
-renderText();
+    renderText();
+   
