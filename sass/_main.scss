@@ -193,6 +193,15 @@
           .gallery {
             display: inline-block;
             width: 100%;
+            position: relative;
+            .more__foto {
+              position: absolute;
+              color: red;
+              bottom: 50px;
+              right: 50px;
+              font-size: 50px;
+              cursor: pointer;
+            }
             .gallery__wrap {
               width: 100%;
               img {

@@ -172,44 +172,38 @@ function getGallery(img) {
     let pictures = '';
     let kiek = 3;
     let nauja;
-    
+    let qq = img.length;
+    let left = '';
+
     if (img.length > 0) {
         for (let i = 0; i < img.length; i++) {
             pictures += `<img src="./img/${img[i]}" alt="pic">`;
             if (img.length > kiek) {
-                nauja = img.length;
-                nauja = kiek;
-                console.log(nauja)
-                HTML = `<div class="gallery">
+               nauja = img.length;
+                img.length = kiek;
+                left = qq - kiek;
+                console.log(left)
+                } HTML = `<div class="gallery">
                 <div class="gallery__wrap length--${i + 1}">
                 ${pictures}
                 </div>
-                <div>${HZ(img)}</div>
+                <div class="more__foto">${HZ(img)}</div>
                                      </div>`;
             }
-                HTML = `<div class="gallery">
-            <div class="gallery__wrap length--${i + 1}">
-            ${pictures}
-            </div>
-            <div>${HZ(img)}</div>
-                                 </div>`;
+            function HZ(img) {
+                let HZ = ``;
+            if (left > 0){
+                HZ = `+${left}`
+            } else {
+              HZ = ``;       
             }
-        
-    }
+          return HZ;
+        }
+        }
             return HTML
     }
 
-function HZ(img) {
-    
-    let HZ = ``;
-    if (img.length > 3){
-      HZ = `${img.length}`
-    } else {
-                HZ = ``;
-    }
-    
-    return HZ;
-}
+
 
 
 function renderText() {
