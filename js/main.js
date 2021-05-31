@@ -182,8 +182,7 @@ function getGallery(img) {
                nauja = img.length;
                 img.length = kiek;
                 left = qq - kiek;
-                console.log(left)
-                } HTML = `<div class="gallery">
+                                } HTML = `<div class="gallery">
                 <div class="gallery__wrap length--${i + 1}">
                 ${pictures}
                 </div>
