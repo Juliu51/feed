@@ -183,19 +183,30 @@ function getGallery(img) {
             <div class="gallery__wrap length--${i + 1}">
             ${pictures}
             </div>
-            <div>${HZ}</div>
+            <div>${QQ}</div>
                                  </div>`;
         }
-        if (nauja > kiek) {
-            HZ = `${nauja}`;
-            console.log(HZ)
-        } else {
-            HZ = '';
-        }
-            }
-    return [HTML , HZ];
+      
+    return HTML
 }
 
+    function QQ() {
+        
+        // let kiek = 4;
+        // let HZ = '';
+        // let naujaz = img.length;
+        // for (let i = 0; i < img.length; i++) {
+            
+        //     console.log(naujaz)
+        //     if (naujaz > kiek) {
+        //         HZ = `${naujaz}`;
+        //     } else {
+        //         HZ = '';
+        //     }
+        // }
+        // }
+return HZ
+}
 
 
 
