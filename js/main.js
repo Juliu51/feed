@@ -170,7 +170,7 @@ function getText(message) {
 function getGallery(img) {
     let HTML = '';
     let pictures = '';
-    let kiek = 4;
+    let kiek = 3;
     let nauja;
     
     if (img.length > 0) {
@@ -178,14 +178,23 @@ function getGallery(img) {
             pictures += `<img src="./img/${img[i]}" alt="pic">`;
             if (img.length > kiek) {
                 nauja = img.length;
-                nauja = 4;
-            } HTML = `<div class="gallery">
+                nauja = kiek;
+                console.log(nauja)
+                HTML = `<div class="gallery">
+                <div class="gallery__wrap length--${i + 1}">
+                ${pictures}
+                </div>
+                <div>${HZ(img)}</div>
+                                     </div>`;
+            }
+                HTML = `<div class="gallery">
             <div class="gallery__wrap length--${i + 1}">
             ${pictures}
             </div>
             <div>${HZ(img)}</div>
                                  </div>`;
-        }
+            }
+        
     }
             return HTML
     }
@@ -196,8 +205,7 @@ function HZ(img) {
     if (img.length > 3){
       HZ = `${img.length}`
     } else {
-        console.log(img.length)
-        HZ = ``;
+                HZ = ``;
     }
     
     return HZ;
