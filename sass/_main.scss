@@ -319,7 +319,37 @@
       background-color: #f5f3f4;
       display: inline-block;
       justify-content: center;
-
+.btc {
+  margin-top: 100px;
+  border: 1px solid black;
+  box-shadow: 2px 4px 20px 0px rgb(132, 140, 147);
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  
+  .BTC,
+  .USD,
+  .PRICE{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    text-decoration: underline;
+      }
+   .PRICE{
+     color: brown;
+   }
+  .MARKETS {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: calc(50% - 60px);
+    cursor: pointer;
+    line-height: 18px;
+  }
+}
       h1 {
         margin: 20px 0;
         text-align: center;

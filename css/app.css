@@ -446,6 +446,40 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
+.wrapper .main .right .btc {
+  margin-top: 100px;
+  border: 1px solid black;
+  box-shadow: 2px 4px 20px 0px #848c93;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.wrapper .main .right .btc .BTC,
+.wrapper .main .right .btc .USD,
+.wrapper .main .right .btc .PRICE {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  text-decoration: underline;
+}
+
+.wrapper .main .right .btc .PRICE {
+  color: brown;
+}
+
+.wrapper .main .right .btc .MARKETS {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(50% - 60px);
+  cursor: pointer;
+  line-height: 18px;
+}
+
 .wrapper .main .right h1 {
   margin: 20px 0;
   text-align: center;
